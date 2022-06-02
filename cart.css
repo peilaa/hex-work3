@@ -671,6 +671,12 @@
         margin-left: 50px;
         margin-right: 42px;
     }
+    .icon {
+        font-size: 35px;
+        margin-left: 180px;
+        margin-top: 16px;
+    }
+
     
     @media screen and (max-width:768px) {
         .footer h2 {
@@ -710,9 +716,13 @@
         }
         .footer img {
             margin-left: 65px;
-            margin-bottom: 80px;
         }
         .contact ul {
             width: 250px;
         }
+        .icon {
+            font-size: 35px;
+            margin-left: 200px;
+            margin-top: 10px;
+    }
     }
