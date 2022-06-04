@@ -190,6 +190,42 @@
         display: none;
     }
     
+    @media (max-width:465px) {
+        .hamburger-container {
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 16px;
+            margin-right: 22px;
+        }
+        .hamburger-container span {
+            display: block;
+            height: 1px;
+            background-color: #fff;
+            position: relative;
+            transition: transform .3s ease-in-out, top .3s ease-in-out .3s;
+            top: 0;
+        }
+        .hamburger-container span:nth-child(2) {
+            margin-top: 7px;
+        }
+        #toggler:checked+label .hamburger-container span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 4px;
+            transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+        }
+        #toggler:checked+label .hamburger-container span:nth-child(2) {
+            transform: rotate(-45deg);
+            top: -4px;
+            transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+        }
+        #toggler:checked~.menu {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+    
     .banner {
         height: 420px;
         background-image: url(./assets/header_desktop.png);

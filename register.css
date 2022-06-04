@@ -167,7 +167,6 @@ body {
     background: #efe9e7;
 }
 
-
 .header {
     width: 100%;
     position: absolute;
@@ -202,6 +201,42 @@ body {
 
 #toggler {
     display: none;
+}
+
+@media (max-width:465px) {
+    .hamburger-container {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 16px;
+        margin-right: 22px;
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background-color: #fff;
+        position: relative;
+        transition: transform .3s ease-in-out, top .3s ease-in-out .3s;
+        top: 0;
+    }
+    .hamburger-container span:nth-child(2) {
+        margin-top: 7px;
+    }
+    #toggler:checked+label .hamburger-container span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+    }
+    #toggler:checked+label .hamburger-container span:nth-child(2) {
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
+    }
+    #toggler:checked~.menu {
+        transform: scaleY(1);
+        opacity: 1;
+    }
 }
 
 .banner {
@@ -336,13 +371,10 @@ input {
     padding: 6px 48px;
 }
 
-
-
 @media (max-width:775px) {
     .all {
         flex-direction: column;
     }
-
     .form {
         max-width: 320px;
     }
@@ -350,6 +382,7 @@ input {
 
 
 /* 頁尾 */
+
 .footer {
     color: #3d1101;
     display: flex;
@@ -362,7 +395,8 @@ input {
     line-height: 32px;
 }
 
-.footer .about, .footer .contact {
+.footer .about,
+.footer .contact {
     width: 299px;
     line-height: 20px;
 }
@@ -397,36 +431,30 @@ input {
     .footer {
         flex-direction: column;
     }
-
-    .about, .contact, .social {
+    .about,
+    .contact,
+    .social {
         max-width: 100%;
     }
-
     .contact h2 {
         margin-left: 0;
         margin: 20px 0;
     }
-
     .social {
         margin: 20px 0;
     }
-
     .contact ul {
         margin-left: 20px;
     }
-
 }
 
 @media(max-width:465px) {
-
     .banner {
         background-image: url("./assets/Bitmap.png");
     }
-
     .slogan span {
         display: block;
     }
-
     .menu {
         display: block;
         flex-direction: column;
@@ -443,7 +471,6 @@ input {
         opacity: 0;
         margin: 0 0px 0 233px;
     }
-
     .menu ul {
         list-style-type: none;
         margin-top: 1em;
@@ -452,7 +479,6 @@ input {
         display: flex;
         flex-direction: column;
     }
-
     .menu li {
         margin: 18px 145px 17px 10px;
         display: inline-flex;
@@ -461,20 +487,16 @@ input {
         line-height: 21px;
         width: 32px;
     }
-
     .menu li a {
         list-style-type: none;
     }
-
     #toggler:checked~.menu {
         transform: scaleY(1);
         opacity: 1;
     }
-
     .logo {
         padding: 20px 10px;
     }
-
     .hamburger-container {
         display: block;
         width: 20px;
@@ -483,7 +505,6 @@ input {
         top: 22px;
         margin-right: 22px;
     }
-
     .hamburger-container span {
         display: block;
         height: 1px;
@@ -492,7 +513,6 @@ input {
         transition: transform .3s ease-in-out, top .3s ease-in-out .3s;
         top: 0;
     }
-
     .hamburger-container span:nth-child(2) {
         margin-top: 7px;
     }
