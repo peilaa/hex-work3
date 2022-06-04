@@ -160,41 +160,13 @@ body {
     max-width: 1024px;
     margin: 0 auto;
     position: relative;
+    background-position: center;
 }
 
 .wrap {
     background: #efe9e7;
 }
 
-@media screen and (max-width:768px) {
-    body {
-        width: 768px;
-        margin: 0 auto;
-    }
-    .wrap,
-    .banner,
-    .header,
-    .brown,
-    .wcolor {
-        width: 768px;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (max-width:320px) {
-    body {
-        width: 320px;
-        margin: 0 auto;
-    }
-    .wrap,
-    .banner,
-    .header,
-    .brown,
-    .wcolor {
-        width: 324px;
-        margin: 0 auto;
-    }
-}
 
 .header {
     width: 100%;
@@ -232,110 +204,21 @@ body {
     display: none;
 }
 
-@media screen and (max-width:768px) {
-    .logo {
-        padding: 17px 0px 15px 10px;
-    }
-    .menu {
-        word-spacing: 30px;
-        padding: 0px 68px 0px 13px;
-        margin-left: 490px;
-    }
-    .menu li {
-        margin: 18px -140px 17px 13px;
-        display: inline-flex;
-        color: #fff;
-        font-size: 16px;
-        line-height: 21px
-    }
-}
-
-@media screen and (max-width:320px) {
-    .logo {
-        padding: 17px 0px 15px 12px;
-    }
-    .hamburger-container {
-        display: block;
-        width: 20px;
-        height: 20px;
-        position: relative;
-        top: 16px;
-        margin-right: 22px;
-    }
-    .hamburger-container span {
-        display: block;
-        height: 1px;
-        background-color: #fff;
-        position: relative;
-        transition: transform .3s ease-in-out, top .3s ease-in-out .3s;
-        top: 0;
-    }
-    .hamburger-container span:nth-child(2) {
-        margin-top: 7px;
-    }
-    #toggler:checked+label .hamburger-container span:nth-child(1) {
-        transform: rotate(45deg);
-        top: 4px;
-        transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
-    }
-    #toggler:checked+label .hamburger-container span:nth-child(2) {
-        transform: rotate(-45deg);
-        top: -4px;
-        transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
-    }
-    .menu {
-        display: block;
-        flex-direction: column;
-        word-spacing: 30px;
-        background-color: rgba(0, 0, 0, .82);
-        width: 10px;
-        height: 250px;
-        position: absolute;
-        top: 44px;
-        left: 0;
-        transform: scaleY(0);
-        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out.3s;
-        transform-origin: 50% 0;
-        opacity: 0;
-        margin: 0 0px 0 233px;
-    }
-    .menu ul {
-        list-style-type: none;
-        margin-top: 1em;
-        padding: 0;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-    }
-    .menu li {
-        margin: 18px 145px 17px 10px;
-        display: inline-flex;
-        color: #fff;
-        font-size: 16px;
-        line-height: 21px;
-        width: 32px;
-    }
-    .menu li a {
-        list-style-type: none;
-    }
-    #toggler:checked~.menu {
-        transform: scaleY(1);
-        opacity: 1;
-    }
-}
-
 .banner {
     height: 420px;
     background-image: url(./assets/header_desktop.png);
 }
 
 .slogan {
+    box-sizing: border-box;
     color: #fff;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.35);
-    width: 460px;
+    max-width: 460px;
     position: absolute;
-    margin: 123px 260px 145px 260px;
+    margin: 123px auto;
+    left: 0;
+    right: 0;
     padding: 20px 22px 26px 22px;
 }
 
@@ -348,40 +231,6 @@ body {
     margin-top: 18px;
     line-height: 22px;
 }
-
-@media screen and (max-width:768px) {
-    .banner {
-        width: 100%;
-    }
-    .slogan {
-        width: 100%;
-        margin: 123px 154px 145px 154px;
-        padding: 20px 22px 26px 22px;
-        width: 460px;
-    }
-}
-
-@media screen and (max-width:320px) {
-    .banner {
-        width: 100%;
-        height: 420px;
-        background-image: url(./assets/Bitmap.png);
-        background-position: center;
-    }
-    .slogan {
-        margin: 123px 12px 145px 12px;
-        padding: 0 0;
-        width: 300px;
-    }
-    .banner div h1 {
-        padding: 20px 6px 20px 6px;
-        line-height: 50px;
-    }
-    span {
-        display: block;
-    }
-}
-
 
 /* login */
 
@@ -468,20 +317,6 @@ input {
     padding: 6px 48px;
 }
 
-@media screen and (max-width:768px) {
-    .form {
-        width: 260px;
-        height: 273px;
-    }
-    .button {
-        width: 115px;
-        padding: 6px 40px;
-    }
-    .button2 {
-        width: 115px;
-        padding: 6px 40px;
-    }
-}
 
 
 /* 頁尾 */
@@ -489,22 +324,18 @@ input {
 .footer {
     color: #3d1101;
     display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+    justify-content: space-between;
+    padding: 50px 43px;
 }
 
 .footer h2 {
     font-size: 24px;
     line-height: 32px;
-    margin-left: 43px;
-    margin-bottom: 16px;
 }
 
-.footer p {
+.footer .about, .footer .contact {
     width: 299px;
     line-height: 20px;
-    margin-left: 43px;
-    margin-bottom: 50px;
 }
 
 .contact h2 {
@@ -515,67 +346,125 @@ input {
     list-style-type: disc;
     margin-left: 43px;
     line-height: 20px;
-    width: 299px;
 }
 
 .footer img {
     width: 245px;
     height: 49px;
-    margin-left: 50px;
-    margin-right: 42px;
+    text-align: right;
 }
 
 .icon {
     font-size: 35px;
-    margin-left: 180px;
-    margin-top: 16px;
 }
 
-@media screen and (max-width:768px) {
-    .footer h2 {
-        margin-left: 11px;
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@media (max-width:775px) {
+    .footer {
+        flex-direction: column;
     }
-    .footer p {
-        width: 235px;
-        line-height: 20px;
-        margin-left: 11px;
-        margin-bottom: 50px;
+
+    .about, .contact, .social {
+        max-width: 100%;
     }
-    .footer img {
-        width: 245px;
-        height: 49px;
-        margin-left: 12px;
-        margin-right: 10px;
-    }
-    .contact {
-        width: 235px;
-    }
+
     .contact h2 {
+        margin-left: 0;
+        margin: 20px 0;
+    }
+
+    .social {
+        margin: 20px 0;
+    }
+
+    .contact ul {
         margin-left: 20px;
     }
+
 }
 
-@media screen and (max-width:320px) {
-    .footer {
+@media(max-width:465px) {
+
+    .banner {
+        background-image: url("./assets/Bitmap.png");
+    }
+
+    .slogan span {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+        flex-direction: column;
+        word-spacing: 30px;
+        background-color: rgba(0, 0, 0, .82);
+        width: 10px;
+        height: 250px;
+        position: absolute;
+        top: 44px;
+        right: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out.3s;
+        transform-origin: 50% 0;
+        opacity: 0;
+        margin: 0 0px 0 233px;
+    }
+
+    .menu ul {
+        list-style-type: none;
+        margin-top: 1em;
+        padding: 0;
+        text-align: center;
         display: flex;
         flex-direction: column;
     }
-    .footer p {
-        width: 299px;
+
+    .menu li {
+        margin: 18px 145px 17px 10px;
+        display: inline-flex;
+        color: #fff;
+        font-size: 16px;
+        line-height: 21px;
+        width: 32px;
     }
-    .contact {
-        width: 235px;
-        margin-bottom: 50px;
+
+    .menu li a {
+        list-style-type: none;
     }
-    .footer img {
-        margin-left: 65px;
+
+    #toggler:checked~.menu {
+        transform: scaleY(1);
+        opacity: 1;
     }
-    .contact ul {
-        width: 250px;
+
+    .logo {
+        padding: 20px 10px;
     }
-    .icon {
-        font-size: 35px;
-        margin-left: 200px;
-        margin-top: 10px;
+
+    .hamburger-container {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 22px;
+        margin-right: 22px;
+    }
+
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background-color: #fff;
+        position: relative;
+        transition: transform .3s ease-in-out, top .3s ease-in-out .3s;
+        top: 0;
+    }
+
+    .hamburger-container span:nth-child(2) {
+        margin-top: 7px;
     }
 }
