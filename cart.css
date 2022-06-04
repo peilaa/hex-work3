@@ -217,38 +217,6 @@
         margin-top: 18px;
         line-height: 22px;
     }
-    /* @media screen and (max-width:768px) {
-        .banner {
-            width: 100%;
-        }
-        .slogan {
-            width: 100%;
-            margin: 123px 154px 145px 154px;
-            padding: 20px 22px 26px 22px;
-            width: 460px;
-        }
-    }
-    
-    @media screen and (max-width:320px) {
-        .banner {
-            width: 100%;
-            height: 420px;
-            background-image: url(./assets/Bitmap.png);
-            background-position: center;
-        }
-        .slogan {
-            margin: 123px 12px 145px 12px;
-            padding: 0 0;
-            width: 300px;
-        }
-        .banner div h1 {
-            padding: 20px 6px 20px 6px;
-            line-height: 50px;
-        }
-        span {
-            display: block;
-        }
-    } */
     
     .content {
         display: flex;
@@ -284,50 +252,45 @@
     .food-list li {
         text-decoration: none;
         font-size: 16px;
-        padding: 10px;
+        /* padding: 10px; */
         width: 220px;
         border-bottom: 1px solid #3d1101;
     }
     
     .food-list a {
+        padding: 10px;
+        display: block;
         text-decoration: none;
         color: #3d1101;
     }
     
-    .food-list li:hover,
-    a:hover {
+    .food-list a:hover {
         background-color: #3d1101;
+        color: white;
+        display: block;
+    }
+    /* .food-list li a:hover {
         display: block;
         color: #EFE9E7;
-    }
-    
-    .food-list li a:hover {
-        display: block;
-        color: #EFE9E7;
-    }
+    } */
     
     .list {
         display: flex;
         flex-direction: column;
         padding: 0 10px;
     }
-    /* @media screen and (max-width:768px) {
+    
+    @media (max-width:880px) {
+        .food-list {
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 80%;
+        }
         .food-list li {
-            width: 200px;
+            width: 100%;
+            text-align: center;
         }
     }
-    
-    @media screen and (max-width:320px) {
-        .content {
-            flex-direction: column;
-        }
-        .food-list {
-            margin: 52px 11px 0 11px;
-        }
-        .food-list li {
-            width: 280px;
-        }
-    } */
     /*  */
     
     .up {
@@ -373,23 +336,17 @@
         clear: both;
         display: table;
     }
-    /* @media screen and (max-width:768px) {
+    
+    @media (max-width:520px) {
         .search input[type=text] {
-            width: 185px;
+            box-sizing: border-box;
+            width: 85%;
+        }
+        .search button {
+            box-sizing: border-box;
+            width: 15%;
         }
     }
-    
-    @media screen and (max-width:320px) {
-        .up {
-            flex-direction: column;
-        }
-        .search {
-            margin: 20px 10px;
-        }
-        .search input[type=text] {
-            width: 250px;
-        }
-    } */
     /* 結帳 */
     
     .checkout {
@@ -413,17 +370,12 @@
         border: none;
         cursor: pointer;
     }
-    /* @media screen and (max-width:768px) {
+    
+    @media (max-width:880px) {
         .checkout {
-            margin-left: 70px;
+            margin-top: 15px;
         }
     }
-    
-    @media screen and (max-width:320px) {
-        .checkout {
-            margin: 0px 0px 32px 194px;
-        }
-    } */
     /* 商品 */
     
     .course {
@@ -501,32 +453,19 @@
         .course-item {
             width: 45%;
         }
-    }
-    /* @media screen and (max-width:768px) {
-        .row {
-            width: 500px;
-            flex-wrap: wrap;
+        .course-item img {
+            width: 100%;
         }
     }
     
-    @media screen and (max-width:320px) {
-        .row {
-            width: 240px;
-        }
+    @media (max-width:520px) {
         .course-item {
-            width: 300px;
-            height: 280px;
-            margin: 0px 10px 30px 10px;
-        }
-        .course-item img {
-            width: 300px;
-            height: 120px;
+            width: 100%;
         }
         .course-item button {
-            width: 300px;
-            height: 28px;
+            width: 100%;
         }
-    } */
+    }
     /* 頁尾 */
     
     .footer {
